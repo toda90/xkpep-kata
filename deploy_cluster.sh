@@ -6,7 +6,7 @@ cd ${SCRIPTPATH}
 
 . ./setup.cfg
 
-cd xpep-kata/yaml
+cd ./yaml
 kubectl apply -f ./mysql_pv.yml
 kubectl apply -f ./mysql_pvc.yml
 kubectl apply -f ./mysql_app.yml
