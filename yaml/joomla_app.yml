@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: joomla
+spec:
+  selector:
+    matchLabels:
+      app: joomla 
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: joomla
+      annotations:
+        fluentbit.io/parser: apache 
+    spec:
+      containers:
+      - image: joomla 
+        name: joomla 
+        env:
+        - name: JOOMLA_DB_HOST 
+          value: mysql 
+        - name: JOOMLA_DB_USER
+          value: root
+        - name: JOOMLA_DB_PASSWORD
+          value: password
+        - name: JOOMLA_DB_NAME
+          value: joomla
+        ports:
+        - containerPort: 80 
+          name: joomla
+        resources:
+          requests:
+            cpu: 400m
