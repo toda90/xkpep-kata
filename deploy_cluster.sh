@@ -6,7 +6,6 @@ cd ${SCRIPTPATH}
 
 . ./setup.cfg
 
-git clone https://github.com/toda90/xpep-kata.git
 cd xpep-kata/yaml
 kubectl apply -f ./mysql_pv.yml
 kubectl apply -f ./mysql_pvc.yml
