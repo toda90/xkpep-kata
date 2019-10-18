@@ -6,7 +6,7 @@ cd ${SCRIPTPATH}
 
 . ./setup.cfg
 
-cd xpep-kata/yaml
+cd ./yaml
 kubectl create namespace logging
 kubectl create -f fluent_bit_configmap.yml
 kubectl create -f fluent_bit_service_account.yml
