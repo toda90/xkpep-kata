@@ -28,3 +28,5 @@ cp -p minikube /usr/local/bin && rm -f minikube
 FILE=$'[kubernetes]\nname=Kubernetes\nbaseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg'
 echo "$FILE" > /etc/yum.repos.d/kubernetes.repo
 /usr/bin/yum -y install kubectl
+git clone https://github.com/toda90/xpep-kata.git
+chmod 775 xpep-kata
