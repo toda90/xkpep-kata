@@ -14,3 +14,4 @@ kubectl apply -f ./mysql_svc.yml
 kubectl apply -f ./joomla_app.yml
 kubectl apply -f ./joomla_svc.yml
 kubectl apply -f ./ingress.yml
+kubectl autoscale deployment joomla --cpu-percent=80 --min=1 --max=5
