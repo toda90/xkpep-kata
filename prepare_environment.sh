@@ -7,6 +7,7 @@ cd ${SCRIPTPATH}
 . ./setup.cfg
 
 setenforce 0
+/usr/bin/yum update
 perl -pi -e 's/SELINUX\=enforcing/SELINUX\=disabled/g' /etc/selinux/config
 systemctl stop firewalld
 systemctl disable firewalld
