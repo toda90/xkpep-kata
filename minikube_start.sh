@@ -4,7 +4,7 @@ SCRIPT=$(readlink -f $0)
 SCRIPTPATH=`dirname $SCRIPT`
 cd ${SCRIPTPATH}
 
-. ./setup.conf
+. ./setup.cfg
 
 minikube start --memory=${ALLOCATED_RAM} --cpus=${ALLOCATED_CPU}
 minikube addons enable dashboard
