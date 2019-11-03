@@ -5,6 +5,8 @@ Configure file setup.cfg, only parameters taken into account at the moment are A
 
 Pull file prepare_environment.sh on your host and place it in a working directory.
 Execute it as root.
+If step /usr/lib/virtualbox/vboxdrv.sh setup fails:
+reboot system --> choose update kernel --> rerun the step manually with root permissions.
 Execute xpep-kata/minikube_start.sh not root
 Execute xpep-kata/deploy_cluster.sh not root
 Execute xpep-kata/logging_solution.sh not root
